@@ -12,7 +12,7 @@ from './components/ScrollToTop';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 import Preloader from "../src/components/Pre";
-import Pre from '../src/components/Pre';
+import Home from './components/Home/Home';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -31,6 +31,10 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <NavBar />
         <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
       </div>
     </Router>
   );

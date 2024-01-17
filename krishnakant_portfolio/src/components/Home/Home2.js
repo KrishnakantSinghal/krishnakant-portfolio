@@ -4,10 +4,12 @@ import Tilt from "react-parallax-tilt";
 import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import laptopImg from "../../Assets/about.png";
+import Particle from "../Particle";
 
 function Home2() {
   return (
     <Container fluid className="home-about-section" id="about">
+      <Particle />
       <Container>
         <div className="home-content">
           <div className="home-about-description">

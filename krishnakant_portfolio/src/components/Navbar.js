@@ -28,7 +28,7 @@ function NavBar() {
   return (
     <div>
       <Nav className="complete-navbar">
-          <Nav.Item className="centerise">
+          <Nav.Item>
             <Button
               as={Link}
               to="/"

@@ -1,30 +1,39 @@
-import React from "react";
-import Particles from "react-tsparticles";
+// Particle.js
 
-function Particle() {
+import React from 'react';
+import Particles from 'react-tsparticles';
+
+const Particle = () => {
   return (
     <Particles
       id="tsparticles"
       options={{
         background: {
           color: {
-            value: "#181b1f",
+            value: '#181b1f',
           },
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
+          detectsOn: 'canvas',
           events: {
             onClick: {
               enable: true,
-              mode: "push",
+              mode: 'push',
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: 'repulse',
             },
             resize: true,
           },
           modes: {
+            bubble: {
+              distance: 400,
+              duration: 2,
+              opacity: 0.8,
+              size: 40,
+            },
             push: {
               quantity: 4,
             },
@@ -36,10 +45,10 @@ function Particle() {
         },
         particles: {
           color: {
-            value: "#9AA2AC",
+            value: '#9AA2AC',
           },
           links: {
-            color: "#9AA2AC",
+            color: '#9AA2AC',
             distance: 150,
             enable: true,
             opacity: 0.5,
@@ -49,19 +58,17 @@ function Particle() {
             enable: true,
           },
           move: {
-            directions: "right",
+            direction: 'right',
             enable: true,
-            outModes: {
-              default: "bounce",
-            },
+            outMode: 'bounce',
             random: false,
-            speed: 1,
+            speed: 2,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 800,
+              value_area: 800,
             },
             value: 80,
           },
@@ -69,17 +76,15 @@ function Particle() {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
-            value: { min: 1, max: 5 },
-          },
+            value: { min: 1, max: 5 }          },
         },
         detectRetina: true,
       }}
     />
   );
-}
+};
 
 export default Particle;
-

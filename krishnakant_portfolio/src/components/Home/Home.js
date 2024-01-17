@@ -6,6 +6,7 @@ import Type from "./Type";
 import krishna_image from "../../Assets/krishna_homepage.png";
 import Particle from "../Particle";
 import About from "../About/About";
+import WorkExperience from "../Experience/WorkExperience";
 
 function Home() {
   return (
@@ -49,6 +50,7 @@ function Home() {
       <Home2 />
       <About/>
       <Home3 /> 
+      <WorkExperience />
     </section>
   );
 }

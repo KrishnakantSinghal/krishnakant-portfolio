@@ -11,8 +11,8 @@ function AboutCard() {
           <p className="about-description">
             Hello Everyone, I am <span className="purple">Krishna Kant Singhal </span>
             from <span className="purple"> Rajasthan, India. </span>
-            A dynamic software developer proficient in Python and React. 
-            Bridging the gap between Python's backend prowess and React's frontend elegance,
+            A dynamic software developer proficient in Python and ReactJS. 
+            Bridging the gap between Python's backend prowess and ReactJS's frontend elegance,
             specializes in creating harmonious, full-stack applications.
             <br/><br/>
             Apart from My Field, some other activities that I love to do!

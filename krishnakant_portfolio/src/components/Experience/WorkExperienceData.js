@@ -8,34 +8,20 @@ const workExperienceData = [
         endDate: 'Present',
         responsibilities: [
           'Developing and maintaining web applications.',
-          'Collaborating with cross-functional teams.',
-          'Implementing new features and functionalities.',
+
+          'Collaborated with a team of developers to design and implement robust and \
+           scalable Python-based solutions, web applications \
+           using Django Rest Framework and ReactJS.',
+          
+          'Utilized version control systems, primarily Git, for efficient \
+          collaboration and code management.',
+          
+          'Participated in code reviews to ensure code quality,\
+           performance, and adherence to coding standards.',
         ],
         website: 'https://www.codetrade.io/',
         logo: codetradeLogo
-      },
-      {
-        position: 'Frontend Developer',
-        company: 'XYZ Tech',
-        startDate: 'June 2018',
-        endDate: 'December 2019',
-        responsibilities: [
-          'Creating responsive user interfaces.',
-          'Working closely with UX/UI designers.',
-          'Optimizing website performance.',
-        ],
-      },
-      {
-        position: 'Intern',
-        company: 'Tech Innovators',
-        startDate: 'May 2017',
-        endDate: 'August 2017',
-        responsibilities: [
-          'Assisting in software development tasks.',
-          'Learning and applying new technologies.',
-          'Contributing to team projects.',
-        ],
-      },
+      }
     ];
 
 export default workExperienceData;

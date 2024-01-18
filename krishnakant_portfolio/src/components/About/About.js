@@ -9,7 +9,7 @@ import techs from "./TechstackValue";
 
 function About() {
   return (
-    <Container fluid className="about-section">
+    <Container fluid className="about-section" id="skills">
       <Particle />
       <Container>
         <div className="about-content">
@@ -23,14 +23,16 @@ function About() {
             <img src={krishna_formal} alt="about" className="img-fluid" />
           </div>
         </div>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
-        <Toolstack toolData={techs} />
-        <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I Use
-        </h1>
-        <Toolstack toolData={tools}/>
+        <div>
+          <h1 className="project-heading">
+            Professional <strong className="purple">Skillset </strong>
+          </h1>
+          <Toolstack toolData={techs} />
+          <h1 className="project-heading">
+            <strong className="purple">Tools</strong> I Use
+          </h1>
+          <Toolstack toolData={tools} />
+        </div>
       </Container>
     </Container>
   );

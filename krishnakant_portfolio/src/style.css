@@ -84,14 +84,57 @@ html {
     display: flex;
     justify-content: space-between;
     margin: 1rem;
+    transition: blue 0.3s ease;
   }
-  
 
-  .logo {
-    height: 1.4em !important;
-    width: 2.5em !important;
+  .scrolled {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }  
+
+  .nav-icons {
+    margin-bottom: 2px;
   }
-  
+
+  .right-nav {
+    gap:1rem;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .right-nav .nav-link {
+    position: relative;
+  }
+
+  .right-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height:3px;
+    background-color: #f0e7e7;
+    bottom: 0;
+    left: 0; 
+    transform: translateX(0);
+    transform-origin: bottom left;
+    transition: width 0.2s ease-in-out;
+    opacity: .9;
+  }
+
+  .nav-link {
+    color: #1295e0;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .nav-link:hover{
+    cursor: pointer;
+  }
+
+  .right-nav .nav-link:hover::after {
+    width: 100%;
+  }
+
   /* --------- */
   /* Home section */
   /* --------- */
@@ -334,8 +377,8 @@ html {
   
   .footer {
     height: auto;
-    background-color: rgba(15, 17, 19, 0.486);
-    clip-path: polygon(0 0, 100% 12%, 100% 100%, 0% 100%);
+    background-color: rgba(50, 54, 58, 0.486);
+    clip-path: polygon(5% 10%, 95% 10%, 100% 100%, 0% 100%);
     bottom: 0 !important;
     padding: 2rem;
   }
@@ -362,6 +405,7 @@ html {
   }
   
   .blockquote-footer {
+    margin-top: 1rem;
     color: #88a7c0 !important;
   }
   
@@ -614,10 +658,10 @@ html {
   }
   
   .box-quote-container {
-    margin-top: 7rem; /* Adjust the margin as needed */
-    padding: 1rem; /* Adjust the padding as needed */
-    border: 1px solid #ccc; /* Border style */
-    border-radius: 8px; /* Border radius for rounded corners */
+    margin-top: 4rem;
+    padding: 1rem;
+    border: 2px solid #337a9b;
+    border-radius: 1rem; 
   }
   
   @media (max-width:768px) {
@@ -712,17 +756,40 @@ h2, h3, p {
 
 .duration {
   font-style: italic;
-  color: #777;
+  color: #d8bebe;
+  font-size: .9rem
 }
 
-.responsibilities {
-  margin: 10px 0 0 20px;
+  .responsibilities {
+    margin: 10px 0 0 20px;
+    padding: 15px;
+    color: #abe1f0
+  }
+
+.responsibilities-list {
+  font-size: 1rem;
+  list-style: none;
   padding: 0;
+  text-align: left;
 }
 
-.responsibilities li {
-  list-style-type: square;
-  margin-bottom: 5px;
+.responsibilities-list li {
+  display: flex;
+  align-items: flex-start; /* Align the content and the marker vertically */
+  vertical-align: top;
+}
+
+.responsibilities-list li::before {
+  content: '>'; /* Content to be displayed before each list item */
+  color: #0056b3; /* Blue color */
+  margin-right: 0.5em; /* Adjust the spacing between the symbol and the text */
+  display: inline-block;
+}
+
+
+.position {
+  margin-bottom: 10px;
+  color: #9f36a3;
 }
 
 /* Responsive Styles */
@@ -734,41 +801,17 @@ h2, h3, p {
 }
 
 /* Basic styling for the <a> tag */
-a {
-  color: #007bff; /* Set link color */
+a, .company-name {
+  color: #00aeff; /* Set link color */
   text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Make the text bold */
+  font-weight: bold;
+  font-size: large;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Hover effect - change color when the mouse hovers over the link */
 a:hover {
   color: #0056b3; /* Change color on hover */
-}
-
-/* Visited link styling */
-a:visited {
-  color: purple; /* Set color for visited links */
-}
-
-/* Add this CSS to your stylesheet or component */
-.responsibilities-list {
-  list-style-type: None; /* Remove default list styles */
-  padding: 0;
-  margin-top: 10px; /* Add top margin for spacing */
-}
-
-.responsibilities-list li {
-  margin-bottom: 5px; /* Add bottom margin for spacing between list items */
-  padding-left: 20px; /* Add left padding to create space for a bullet point or icon */
-  position: relative;
-}
-
-.responsibilities-list li::before {
-  content: "\25A0"; /* Unicode character for a bullet point (•) */
-  color: #007bff; /* Bullet point color */
-  font-size: 1.2em; /* Bullet point size */
-  position: absolute;
-  left: 0;
 }
 
 
@@ -782,7 +825,11 @@ a:visited {
 }
 
 .experience-card-view {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
   box-shadow: 0 4px 5px 3px rgba(53, 110, 136, 0.459) !important;
+  border-radius: 1rem;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
@@ -793,14 +840,26 @@ a:visited {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
 }
 
+@media (max-width: 768px) {
+  .experience-card-view {
+    display: block;
+  }
+}
+
 .experience-card-view:hover{
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(72, 127, 144, 0.561) !important;
 }
 
+.company-details{
+  margin: 10px;
+  padding: 15px;
+  flex: 1
+}
+
 .company-logo{
-  background: #fff;
+  background: #ffffff;
   width: 10rem;
   height: 5rem;
   border-radius: 30%; 

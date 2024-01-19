@@ -29,7 +29,7 @@ function App() {
 
   return (
     <section>
-      <Router basename={process.env.REACT_APP_PUBLIC_URL}>
+      <Router>
         <Preloader load={load} />
         <div className="App" id={load ? "no-scroll" : "scroll"}>
           <NavBar />

@@ -8,9 +8,10 @@ import Particle from "../Particle";
 import About from "../About/About";
 import WorkExperience from "../Experience/WorkExperience";
 
+
 function Home() {
   return (
-    <section>
+    <section id="home">
       <Particle />
       <Container className="home-content">
         <div className="home-header" style={{ flex: 1 }}>

@@ -15,7 +15,6 @@ import Preloader from "../src/components/Pre";
 import Home from './components/Home/Home';
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
-import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 
 function App() {
@@ -41,7 +40,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Navigate to="/" />} />
           <Route path="/resume" element={<Resume />} />
-          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
         <footer>

@@ -1,56 +1,34 @@
-import estore from "../../Assets/Projects/estore.jpg";
-import moviezone from "../../Assets/Projects/moviezone.jpg";
-import netflix from "../../Assets/Projects/netflix-clone.jpg";
-import noteKeeper from "../../Assets/Projects/noteKeeper.jpg";
-import ozshop from "../../Assets/Projects/ozshop.png";
+import vendorManagement from "../../Assets/Projects/vendor-management.png";
+import hubstaffProject from "../../Assets/Projects/hubstaff-project.png";
+import secretFineFoods from "../../Assets/Projects/secret-fine-foods.png";
 
   
   // Create an array to store tool information
   const projectscarddata = [
     { 
-        image: ozshop,
-        title: "Ozshop Ecommerce",
-        description:"Online Ecommerce website build with HTML,CSS,JS,PHP & MYSQLI. \
-        Online Ecommerce which help shopping with just one click and delivery to door step. \
-        This is prototype project for semester project.As a team we worked together and learn so much real life problem and how to tackle them.", 
-        ghLink:"https://github.com/TilakKhatri/OZ-ESHOP" 
+        image: hubstaffProject,
+        title: "Employee activity and performance tracker",
+        description:"Welcome to our Employee Performance and Time Tracking System, \
+        a robust and feature-rich solution meticulously crafted using cutting-edge technologies. \
+        This project leverages the power of Django Rest Framework, Celery, Redis, and JavaScript to deliver an unparalleled employee management experience.", 
     },
 
     {
-        image: estore, 
-        title: "Estore Web", 
-        description:"This is clone website of Ecommerce site for daily accessories. \
-        This app uses Fake Store API to get all thre products and the styling framework is Bootstrap. \
-        Reactjs used for UI. This is one of the simple Reactjs website with Bootstrap.", 
-        ghLink:"https://github.com/TilakKhatri/estore_with_api" 
+        image: secretFineFoods, 
+        title: "Food E-Commerce Web Application", 
+        description:"Together with the talented team, we successfully delivered a feature-rich \
+        and innovative food e-commerce platform, showcasing the capabilities of modern web technologies \
+        like django rest framework, django oscar, reactJS for frontend part.", 
     },
 
     { 
-        image: moviezone, 
-        title: "Moviezone", 
-        description:"Moviezone is a film review system to share most liked and reviewed film through college students. \
-        From this site we can recommended our friends to watch those movies.Build with react.js, Tailwindcss, and Firebase.\
-        Have features which allows user for realtime like, dislike, review, and add movie functionality with search movie by name.", 
-        ghLink:"https://github.com/TilakKhatri/movies-zone"
+        image: vendorManagement, 
+        title: "Vendor Management System", 
+        description:"Vendor Management System using Django and Django REST Framework. This system will handle vendor profiles,\
+         track purchase orders, and calculate vendor performance metrics.", 
+        ghLink:"https://github.com/KrishnakantSinghal/fatmug-designs" 
     },
 
-    { 
-        image: noteKeeper, 
-        title: "Personal Note Keeper", 
-        description:"My personal note keeper Reactjs and Tailwind Css which takes the content like question and answer from user and renders it using Reactjs. \
-        Firebase is used to store all notes and renders to show all notes having functionlities like search, add, delete.", 
-        ghLink:"https://github.com/TilakKhatri/noteKeeper" 
-    },
-
-    { 
-        image: netflix, 
-        title: "Netflix Clone",
-        description:"One of the site which I really love is Netflix that's the reason I want to create from scratch. \
-        So I make clone of Netflix and take movie data from themoviedb API. \
-        This website is bulid with Reactjs, Tailwindcss, scass, themoviedb API. \
-        Here I use Axio for api calling and figma to design this website.", 
-        ghLink:"https://github.com/TilakKhatri/netflix-clone" 
-    },
 ];
     
 export default projectscarddata;

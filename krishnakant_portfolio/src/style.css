@@ -83,8 +83,21 @@ html {
   .complete-navbar {
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
     transition: blue 0.3s ease;
+  }
+
+  .nav-item {
+    margin-top: .5rem;
+  }
+
+  .navbar-scrolled {
+    background-color:#cadee9;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    opacity: .95; 
+    transition: background-color 0.4s ease;
   }
 
   .scrolled {
@@ -98,7 +111,7 @@ html {
   }
 
   .right-nav {
-    gap:1rem;
+    gap: 1rem;
     display: flex;
     transition: transform 0.3s ease-in-out;
   }
@@ -112,7 +125,7 @@ html {
     position: absolute;
     width: 0%;
     height:3px;
-    background-color: #f0e7e7;
+    background-color: #0051ff;
     bottom: 0;
     left: 0; 
     transform: translateX(0);
@@ -614,7 +627,6 @@ html {
     color:#885b88;
   }
   
-
   .quote-card-view {
     border: none !important;
     color: white !important;
@@ -683,9 +695,8 @@ html {
   }
   
 
-  /* WorkExperience.css */
-
 /* WorkExperience.css */
+
 
 
 .job-item-container {
@@ -726,22 +737,6 @@ html {
 .experiences{
   display: flex;
   justify-content: center;
-}
-
-.job-item-container {
-  display: grid;
-  gap: 1.2rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-
-.job-item {
- 
-  box-shadow: 0 4px 5px 3px rgba(53, 110, 136, 0.459) !important;
-  color: white !important;
-  background-color: transparent !important;
-  opacity: 0.9 !important;
-  transition: all 0.5s ease 0s !important;
-  height: 100% !important;
 }
 
 .job

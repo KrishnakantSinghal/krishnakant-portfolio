@@ -17,6 +17,7 @@ function NavBar() {
   const [width, setWidth] = useState(1200);
   const isMobile = width <= 769;
   const navigate = useNavigate();
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
   const scrollTo = (elementId) => {
@@ -26,10 +27,16 @@ function NavBar() {
     }
   };
 
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 0);
+  };
+
   const handleDownloadCVClick = ({ component_id }) => {
-    if (location.pathname === "/resume") {
+    if (location.pathname === "/resume" || location.pathname === "/projects") {
       navigate("/");
-      scrollTo(component_id);
+      setTimeout(() => {
+        scrollTo(component_id);
+      }, 100);
     } else {
       scrollTo(component_id);
     }
@@ -37,85 +44,82 @@ function NavBar() {
 
   useEffect(() => {
     setWidth(window.innerWidth);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
-    <div>
-      <Nav className="complete-navbar">
-        <Nav.Item>
-          <Button as={Link} to="/">
-            <AiOutlineHome />
-          </Button>
-        </Nav.Item>
+    <Nav className={`complete-navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+      <Nav.Item>
+        <Button onClick={() => handleDownloadCVClick({ component_id: "home" })}>
+          <AiOutlineHome />
+        </Button>
+      </Nav.Item>
 
-        <div className="right-nav">
-          {isMobile ? (
+      <div className="right-nav">
+        {isMobile ? (
+          <Nav.Item>
+            <Button variant="primary" href={resumepdf} target="_blank">
+              <AiOutlineDownload />
+              &nbsp;Download CV
+            </Button>
+          </Nav.Item>
+        ) : (
+          <>
             <Nav.Item>
-              <Button variant="primary" href={resumepdf} target="_blank">
-                <AiOutlineDownload />
-                &nbsp;Download CV
+              <ScrollLink
+                className="nav-link"
+                onClick={() => handleDownloadCVClick({ component_id: "about" })}
+              >
+                <AiOutlineUser className="nav-icons" /> About
+              </ScrollLink>
+            </Nav.Item>
+
+            <Nav.Item>
+              <ScrollLink
+                className="nav-link"
+                onClick={() =>
+                  handleDownloadCVClick({ component_id: "skills" })
+                }
+              >
+                <AiOutlineTool className="nav-icons" /> Skills
+              </ScrollLink>
+            </Nav.Item>
+
+            <Nav.Item>
+              <ScrollLink
+                className="nav-link"
+                onClick={() =>
+                  handleDownloadCVClick({ component_id: "projects" })
+                }
+              >
+                <AiOutlineProject className="nav-icons" /> Projects
+              </ScrollLink>
+            </Nav.Item>
+
+            <Nav.Item>
+              <ScrollLink
+                className="nav-link"
+                onClick={() =>
+                  handleDownloadCVClick({ component_id: "experiences" })
+                }
+              >
+                <MdWorkHistory className="nav-icons" /> Experiences
+              </ScrollLink>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Button as={Link} to="/resume">
+                <AiOutlineDownload /> Download CV
               </Button>
             </Nav.Item>
-          ) : (
-            <>
-              <Nav.Item>
-                <ScrollLink
-                  className="nav-link"
-                  to="about"
-                  onClick={() =>
-                    handleDownloadCVClick({ component_id: "about" })
-                  }
-                >
-                  <AiOutlineUser className="nav-icons" /> About
-                </ScrollLink>
-              </Nav.Item>
-
-              <Nav.Item>
-                <ScrollLink
-                  className="nav-link"
-                  to="skills"
-                  onClick={() =>
-                    handleDownloadCVClick({ component_id: "skills" })
-                  }
-                >
-                  <AiOutlineTool className="nav-icons" /> Skills
-                </ScrollLink>
-              </Nav.Item>
-
-              <Nav.Item>
-                <ScrollLink
-                  className="nav-link"
-                  to="projects"
-                  onClick={() =>
-                    handleDownloadCVClick({ component_id: "projects" })
-                  }
-                >
-                  <AiOutlineProject className="nav-icons" /> Projects
-                </ScrollLink>
-              </Nav.Item>
-
-              <Nav.Item>
-                <ScrollLink
-                  className="nav-link"
-                  to="experiences"
-                  onClick={() =>
-                    handleDownloadCVClick({ component_id: "experiences" })
-                  }
-                >
-                  <MdWorkHistory className="nav-icons" /> Experiences
-                </ScrollLink>
-              </Nav.Item>
-
-              <Nav.Item>
-                <Button as={Link} to="/resume">
-                  <AiOutlineDownload /> Download CV
-                </Button>
-              </Nav.Item>
-            </>
-          )}
-        </div>
-      </Nav>
-    </div>
+          </>
+        )}
+      </div>
+    </Nav>
   );
 }
 

@@ -1,7 +1,6 @@
 {
   "name": "krishnakant_portfolio",
   "version": "0.1.0",
-  "homepage": "http://KrishnakantSinghal.github.io/krishnakant-portfolio", 
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -27,10 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build && cp build/index.html build/404.html"  
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/krishnakant-portfolio/static/css/main.a2d1f98e.css",
+    "main.js": "/krishnakant-portfolio/static/js/main.c0b147c1.js",
+    "static/js/787.488488b7.chunk.js": "/krishnakant-portfolio/static/js/787.488488b7.chunk.js",
+    "static/media/Krishna_formal.png": "/krishnakant-portfolio/static/media/Krishna_formal.725eecebd8e0ba0739b0.png",
+    "static/media/secret-fine-foods.png": "/krishnakant-portfolio/static/media/secret-fine-foods.e714d58ec8aeb337a60e.png",
+    "static/media/krishna_homepage.png": "/krishnakant-portfolio/static/media/krishna_homepage.c111deec93c415b3f422.png",
+    "static/media/vendor-management.png": "/krishnakant-portfolio/static/media/vendor-management.d045a69258c23a008604.png",
+    "static/media/hubstaff-project.png": "/krishnakant-portfolio/static/media/hubstaff-project.c97086792eb10af330b2.png",
+    "static/media/about.png": "/krishnakant-portfolio/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/resume.pdf": "/krishnakant-portfolio/static/media/resume.e857f6ee2a36537a43c3.pdf",
+    "static/media/codetrade-logo.svg": "/krishnakant-portfolio/static/media/codetrade-logo.49ccd50eb3e4dd0e770b0fea7905c0e9.svg",
+    "static/media/pre.svg": "/krishnakant-portfolio/static/media/pre.d4812f51c8c80976eaab.svg",
+    "index.html": "/krishnakant-portfolio/index.html",
+    "main.a2d1f98e.css.map": "/krishnakant-portfolio/static/css/main.a2d1f98e.css.map",
+    "main.c0b147c1.js.map": "/krishnakant-portfolio/static/js/main.c0b147c1.js.map",
+    "787.488488b7.chunk.js.map": "/krishnakant-portfolio/static/js/787.488488b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2d1f98e.css",
+    "static/js/main.c0b147c1.js"
+  ]
+}

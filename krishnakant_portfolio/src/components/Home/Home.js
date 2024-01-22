@@ -7,7 +7,7 @@ import krishna_image from "../../Assets/krishna_homepage.png";
 import Particle from "../Particle";
 import About from "../About/About";
 import WorkExperience from "../Experience/WorkExperience";
-
+import { BsFillEnvelopeFill, BsFillTelephoneFill } from "react-icons/bs";
 
 function Home() {
   return (
@@ -25,8 +25,8 @@ function Home() {
           </div>
           <div className="contact-info">
             <h4 style={{ color: "#70e7f0" }}>Contact me:</h4>
-            <p style={{ fontSize: "1.2rem", marginBottom: "5px" }}>
-              Email:{" "}
+            <p style={{ fontSize: "1.2rem", marginBottom: "0.1rem" }}>
+              <BsFillEnvelopeFill style={{ marginRight: "0.5rem" }} />
               <a
                 href="mailto:krishnakant3002@gmail.com"
                 style={{ textDecoration: "none", color: "#FF00FF" }}
@@ -34,8 +34,8 @@ function Home() {
                 krishnakant3002@gmail.com
               </a>
             </p>
-            <p style={{ fontSize: "1.2rem", marginBottom: "5px" }}>
-              Phone:{" "}
+            <p style={{ fontSize: "1.2rem" }}>
+              <BsFillTelephoneFill style={{ marginRight: "0.5rem" }} />
               <a
                 href="tel:+91 89059 39046"
                 style={{ textDecoration: "none", color: "inherit" }}

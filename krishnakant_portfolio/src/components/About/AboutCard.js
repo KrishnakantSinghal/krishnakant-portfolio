@@ -8,7 +8,7 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p className="about-description">
+          <div className="about-description">
             Hello Everyone, I am <span className="purple">Krishna Kant Singhal </span>
             from <span className="purple"> Rajasthan, India. </span>
             A dynamic software developer proficient in Python and ReactJS. 
@@ -16,7 +16,7 @@ function AboutCard() {
             specializes in creating harmonious, full-stack applications.
             <br/><br/>
             Apart from My Field, some other activities that I love to do!
-          </p>
+          </div>
           <div>
           <ul style={{padding: "0"}}>
             <li className="about-activity">

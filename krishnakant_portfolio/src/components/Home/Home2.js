@@ -8,7 +8,7 @@ import Particle from "../Particle";
 
 function Home2() {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid id="about">
       <Particle />
       <Container>
         <div className="home-content">
@@ -27,9 +27,9 @@ function Home2() {
               <br />
               Experienced in
               <i>
-                <b className="sky"> full-stack development </b>
+                <b className="sky"> full-stack development, </b>
               </i>
-              development, specializing in back-end technologies.
+               specializing in back-end technologies.
               <br />
               <br />
               Proven ability to

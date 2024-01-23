@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Particle from "../Particle";
 import Aboutcard from "./AboutCard";
 import Toolstack from "./Toolstack";
 import krishna_formal from "../../Assets/Krishna_formal.png";
@@ -10,7 +9,6 @@ import techs from "./TechstackValue";
 function About() {
   return (
     <Container fluid className="about-section" id="skills">
-      <Particle />
       <Container>
         <div className="about-content">
           <div className="about-text">

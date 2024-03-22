@@ -4,13 +4,14 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import projectscarddata from "./ProjectCardData";
 
-const Project = ({ image, title, description, ghLink }) => (
+const Project = ({ image, title, description, ghLink, project_detail_images }) => (
   <Col md={4} className="project-card">
     <ProjectCard
       imgPath={image}
       title={title}
       description={description}
       ghLink={ghLink}
+      project_detail_images={project_detail_images}
     />
   </Col>
 );
@@ -20,7 +21,7 @@ const projects = projectscarddata;
 function Projects() {
   return (
     <Container fluid className="project-section">
-       <Particle />
+      <Particle />
       <Container>
         <h1 className="project-heading">
           My Recent <strong className="purple">Works </strong>
@@ -29,15 +30,16 @@ function Projects() {
           Here are a few projects I've worked on.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-            {projects?.map((project, index) => (
-              <Project 
-                key={index} 
-                image={project?.image} 
-                title={project?.title} 
-                description={project?.description} 
-                ghLink={project?.ghLink} 
-              />
-            ))}
+          {projects?.map((project, index) => (
+            <Project
+              key={index}
+              image={project?.image}
+              title={project?.title}
+              description={project?.description}
+              ghLink={project?.ghLink}
+              project_detail_images={project?.project_detail_images}
+            />
+          ))}
         </Row>
       </Container>
     </Container>

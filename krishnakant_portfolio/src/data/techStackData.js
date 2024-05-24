@@ -16,7 +16,7 @@ import {
   } from "react-icons/si";
   
 // Create an array to store tool information
-const techs = [
+const techCardData = [
     { icon: DiJavascript1, name: "Javascript" },
     { icon: DiReact, name: "ReactJS" },
     { icon: DiPython, name: "Python" },
@@ -30,4 +30,4 @@ const techs = [
     { icon: SiFirebase, name: "Firebase" },
   ];
   
-export default techs;
+export default techCardData;

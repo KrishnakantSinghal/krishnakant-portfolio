@@ -1,12 +1,13 @@
 import React from "react";
+import { useSelector } from 'react-redux';
 import { Container } from "react-bootstrap";
 import Aboutcard from "./AboutCard";
-import Toolstack from "./Toolstack";
+import SkillStack from "./skillStack";
 import krishna_formal from "../../Assets/Krishna_formal.png";
-import tools from "./ToolstackValue";
-import techs from "./TechstackValue";
 
 function About() {
+  const tools = useSelector((state) => state.toolsData.tools);
+  const techs = useSelector((state) => state.techsData.techs);
   return (
     <Container fluid className="about-section" id="skills">
       <Container>
@@ -25,11 +26,11 @@ function About() {
           <h1 className="project-heading">
             Professional <strong className="purple">Skillset </strong>
           </h1>
-          <Toolstack toolData={techs} />
+          <SkillStack skillData={techs} />
           <h1 className="project-heading">
             <strong className="purple">Tools</strong> I Use
           </h1>
-          <Toolstack toolData={tools} />
+          <SkillStack skillData={tools} />
         </div>
       </Container>
     </Container>

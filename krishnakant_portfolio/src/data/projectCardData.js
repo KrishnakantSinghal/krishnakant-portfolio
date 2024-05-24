@@ -1,11 +1,10 @@
-import vendorManagement from "../../Assets/Projects/vendor-management.png";
-import hubstaffProject from "../../Assets/Projects/hubstaff-project.png";
-import secretFineFoods from "../../Assets/Projects/secret-fine-foods.png";
-import dokifiaiIdeatorLight from "../../Assets/Projects/dokifiai/ideator_light.png";
-// import dokifiaiIdeatorImages from "../../Assets/Projects/dokifiai/";
+import vendorManagement from "../Assets/Projects/vendor-management.png";
+import hubstaffProject from "../Assets/Projects/hubstaff-project.png";
+import secretFineFoods from "../Assets/Projects/secret-fine-foods.png";
+import dokifiaiIdeatorLight from "../Assets/Projects/dokifiai/ideator_light.png";
 
 const dokifiaiImages = [];
-const dokifiaicontext = require.context('../../Assets/Projects/dokifiai', false, /(png|jpe?g|svg)$/);
+const dokifiaicontext = require.context('../Assets/Projects/dokifiai', false, /(png|jpe?g|svg)$/);
 dokifiaicontext.keys().forEach((key) => {
     const trimmedPath = key.replace(/^\.\//, '');
     const imagePath = `../../Assets/Projects/dokifiai/${trimmedPath}`;
@@ -14,7 +13,7 @@ dokifiaicontext.keys().forEach((key) => {
   });
 
 // Create an array to store tool information
-const projectscarddata = [
+const projectsCardData = [
     {
         image: hubstaffProject,
         title: "Employee activity and performance tracker",
@@ -52,4 +51,4 @@ const projectscarddata = [
     },
 ];
 
-export default projectscarddata;
+export default projectsCardData;

@@ -2,18 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
 import ProjectCard from "../Projects/ProjectCards";
-import projectscarddata from "../Projects/ProjectCardData";
-
-const shuffleProjects = (projectslist) => {
-  // Fisher-Yates shuffle algorithm
-  for (let i = projectslist.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [projectslist[i], projectslist[j]] = [projectslist[j], projectslist[i]];
-  }
-  return projectslist;
-};
-
-const projects = shuffleProjects([...projectscarddata]).slice(0, 3);
+import { useSelector } from 'react-redux';
 
 const Project = ({ image, title, description, ghLink }) => (
   <div className="project-card">
@@ -27,6 +16,13 @@ const Project = ({ image, title, description, ghLink }) => (
 );
 
 function Home3() {
+  const projectData = useSelector((state) => state.projectData.projects);
+  const getRandomProjects = (projectData) => {
+    const shuffled = [...projectData].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 3);
+  };
+  const projects = getRandomProjects(projectData);
+
   return (
     <Container fluid className="project-section" id="projects">
       <Container>

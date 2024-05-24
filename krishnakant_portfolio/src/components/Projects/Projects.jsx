@@ -1,8 +1,8 @@
 import React from "react";
+import { useSelector } from 'react-redux';
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import projectscarddata from "./ProjectCardData";
 
 const Project = ({ image, title, description, ghLink, project_detail_images }) => (
   <Col md={4} className="project-card">
@@ -16,9 +16,9 @@ const Project = ({ image, title, description, ghLink, project_detail_images }) =
   </Col>
 );
 
-const projects = projectscarddata;
 
 function Projects() {
+  const projects = useSelector((state) => state.projectData.projects);
   return (
     <Container fluid className="project-section">
       <Particle />

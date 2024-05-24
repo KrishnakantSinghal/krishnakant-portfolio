@@ -1,7 +1,7 @@
 import React from "react";
+import { useSelector } from 'react-redux';
 import { Container } from "react-bootstrap";
 import WorkExperienceCard from "./WorkExperienceCard";
-import WorkExperienceData from "./WorkExperienceData";
 
 const Work = ({
   position,
@@ -25,16 +25,16 @@ const Work = ({
   </div>
 );
 
-const works = WorkExperienceData;
 
 function WorkExperience() {
+  const workExperiences = useSelector((state) => state.workExperienceData.experiences);
   return (
     <Container fluid className="experience-section" id="experiences">
       <Container>
         <h1 className="experience-heading">
           Work <strong className="purple">Experiences</strong>
         </h1>
-        {works?.map((work, index) => (
+        {workExperiences?.map((work, index) => (
           <Work
             key={index}
             position={work?.position}

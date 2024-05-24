@@ -6,8 +6,7 @@ import {
     SiSwagger
   } from "react-icons/si";
   
-  // Create an array to store tool information
-  const tools = [
+  const toolsCardData = [
       { icon: SiUbuntu, name: "Linux (Ubuntu)" },
       { icon: SiVisualstudiocode, name: "Visual Studio Code" },
       { icon: SiPycharm, name: "Pycharm" },
@@ -15,4 +14,4 @@ import {
       { icon: SiSwagger, name: "Swagger-UI" },
     ];
     
-  export default tools;
+  export default toolsCardData;

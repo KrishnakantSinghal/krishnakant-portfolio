@@ -1,4 +1,4 @@
-import codetradeLogo from "../../Assets/CompanyLogo/codetrade-logo.svg";
+import codetradeLogo from "../Assets/CompanyLogo/codetrade-logo.svg";
 
 const workExperienceData = [
     {

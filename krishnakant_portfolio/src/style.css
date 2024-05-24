@@ -17,7 +17,7 @@ html {
   color: var(--imp-text-color);
 }
 
-.techstack {
+.skillstack {
   color: var(--imp-text-color);
   font-size: 24px;
 }
@@ -365,7 +365,7 @@ button:focus {
   color: white;
 }
 
-.tech-icons {
+.skill-icons {
   font-size: 4.5em;
   padding: 1rem;
   border: 1.7px solid rgba(137, 196, 230, 0.637);
@@ -374,12 +374,12 @@ button:focus {
   transition: all 0.4s ease 0s;
 }
 
-.tech-icons:hover {
+.skill-icons:hover {
   transform: scale(1.05);
   border: 2.2px solid rgba(115, 184, 230, 0.883);
 }
 
-.tech-container {
+.skill-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 1rem;
@@ -601,12 +601,12 @@ a:hover {
     margin-top: 1rem;
   }
 
-  .tech-container {
+  .skill-container {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   }
 
   @media (max-width: 768px) {
-    .tech-container {
+    .skill-container {
       grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     }
   }
